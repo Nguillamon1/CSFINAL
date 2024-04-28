@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Art Prompt and Color Inspiration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .color-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 5px;
+        }
+        .generate-button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .generate-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <h1>Welcome to the Art Prompt Generator!</h1>
+    <a href="/generate" class="generate-button">Generate Art Prompt</a>
+
+    <h2>Color Inspiration:</h2>
+    <div>
+        {% for color in colors %}
+            <div class="color-circle" style="background-color: {{ color.hex }};"></div> <!-- Ensure 'hex' matches the key for color code in the API response -->
+        {% endfor %}
+    </div>
+
+    {% block content %}{% endblock %}
+</body>
+</html>

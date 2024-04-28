@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<style>
+    .color-circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        display: inline-block;
+        margin: 2px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>Your Art Prompt:</h1>
+<p>{{ prompt }}</p>
+<a href="/generate" class="generate-button">Generate Another Prompt</a>
+
+<h2>Color Inspiration:</h2>
+<div>
+    {% for color in colors %}
+        <div class="color-circle" style="background-color: {{ color.hex }}"> <!-- Assuming the color info is in hex format -->
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

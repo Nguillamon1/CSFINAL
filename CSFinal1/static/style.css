@@ -1,0 +1,28 @@
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #f8d7da; /* light pink */
+    color: #080710;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #66bd3e; /* sage green */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #09b36c;
